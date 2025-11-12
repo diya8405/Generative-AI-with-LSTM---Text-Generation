@@ -64,7 +64,7 @@ matplotlib
 requests
 📥 Installation
 1. Clone the Repository
-bashgit clone https://github.com/yourusername/shakespeare-text-generation.git
+bashgit clone https://github.com/diya8405/Generative-AI-with-LSTM---Text-Generation.git
 cd shakespeare-text-generation
 2. Create Virtual Environment (Optional but Recommended)
 bash# Using venv
