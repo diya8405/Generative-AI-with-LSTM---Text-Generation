@@ -30,10 +30,6 @@ The model is trained on Shakespeare's complete works from MIT OpenCourseWare:
 Dataset URL: https://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt
 Dataset Statistics:
 
-Total tokens: ~898,199 words
-Unique words: ~27,956
-Training sequences: ~199,951
-
 🏗️ Model Architecture
 Model: "sequential"
 _________________________________________________________________
@@ -79,7 +75,7 @@ source venv/bin/activate
 bashpip install -r requirements.txt
 ```
 
-**requirements.txt**:
+**requirements**:
 ```
 tensorflow==2.15.0
 keras==2.15.0
@@ -100,10 +96,6 @@ import pickle
 
 # Load the trained model
 model = load_model('shakespeare_bot.h5')
-
-# Load tokenizer
-with open('tokenizer.pkl', 'rb') as f:
-    tokenizer = pickle.load(f)
 
 # Generate text
 seed_text = "to be or not to be"
@@ -147,8 +139,8 @@ print(text)
 
 - **Initial Loss**: ~9.0
 - **Final Loss**: ~6.5 (after 5 epochs)
-- **Initial Accuracy**: ~5%
-- **Final Accuracy**: ~10% (after 5 epochs)
+- **Initial Accuracy**: ~0.1%
+- **Final Accuracy**: ~0.10% (after 5 epochs)
 
 ### Performance Notes
 
@@ -161,11 +153,8 @@ print(text)
 shakespeare-text-generation/
 │
 ├── generative-ai-with-lstm-text-generation.ipynb  # Main notebook
-├── train.py                                        # Training script
 ├── model_utils.py                                  # Utility functions
 ├── shakespeare_bot.h5                              # Trained model
-├── tokenizer.pkl                                   # Saved tokenizer
-├── requirements.txt                                # Dependencies
 ├── README.md                                       # This file
 │
 ├── data/
